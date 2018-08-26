@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+
 import './App.css';
+import Header from "../Header";
 
 class App extends Component {
   render() {
     return (
       <div id="app">
-        <Router>
-
-        </Router>
+        <Header />
+        {this.props.children}
       </div>
     );
   }

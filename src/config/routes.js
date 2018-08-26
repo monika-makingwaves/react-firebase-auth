@@ -1,10 +1,10 @@
 // Unprotected routs
-export default SIGN_UP = '/signup';
-export default LOGIN = '/login';
-export default PASSWORD_FORGET = '/password-forget';
-export default LANDING = '/';
+export const SIGN_UP = '/signup';
+export const LOGIN = '/login';
+export const PASSWORD_FORGET = '/password-forget';
+export const LANDING = '/';
 
 
 // Protected routs
-export default PROFILE = '/profile';
-export default HOME = '/home';
+export const PROFILE = '/profile';
+export const HOME = '/home';
