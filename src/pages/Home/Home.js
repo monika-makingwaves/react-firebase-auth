@@ -2,7 +2,9 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <p>Home page</p>
+    <p>Home page
+      <button className="btn btn-danger btn-sm">button</button>
+    </p>
   );
 };
 

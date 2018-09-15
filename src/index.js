@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom';
-import './index.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './style/index.css';
 import Setup from './config/setup';
 import registerServiceWorker from './registerServiceWorker';
 
