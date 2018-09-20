@@ -22,7 +22,7 @@ class Header extends Component {
     return (
       <div>
         <Navbar className="bg-dark navbar-expand-sm" dark>
-          <NavbarBrand tag={Link} to={routs.HOME} className="mr-auto">Home Dashboard</NavbarBrand>
+          <NavbarBrand tag={Link} to={routs.LANDING} className="mr-auto">Home Dashboard</NavbarBrand>
           <NavbarToggler onClick={this.toggle} className="mr-2" />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav navbar>
@@ -30,7 +30,7 @@ class Header extends Component {
                 <NavLink tag={Link} to={routs.PROFILE}>Profile</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to={routs.LANDING}>Landing</NavLink>
+                <NavLink tag={Link} to={routs.HOME}>Home</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink tag={Link} to={routs.LOGIN}>Log in</NavLink>

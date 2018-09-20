@@ -10,6 +10,7 @@ import Home from '../pages/Home';
 import LandingPage from '../pages/LandingPage';
 import LoginPage from '../pages/LoginPage';
 import ProfilePage from '../pages/ProfilePage';
+import SignUpPage from "../pages/SignUpPage/SignUpPage";
 
 export default function() {
   const store = createStore();
@@ -19,9 +20,11 @@ export default function() {
     <Provider store={store}>
       <Router>
         <App>
-          <Route exact path={routes.HOME} component={Home} />
           <Route exact path={routes.LANDING} component={LandingPage} />
+          <Route exact path={routes.SIGN_UP} component={SignUpPage} />
           <Route exact path={routes.LOGIN} component={LoginPage} />
+
+          <Route exact path={routes.HOME} component={Home} />
           <Route exact path={routes.PROFILE} component={ProfilePage} />
         </App>
       </Router>

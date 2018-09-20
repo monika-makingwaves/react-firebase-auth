@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.1.3",
+    "compose-react": "^1.0.6",
     "firebase": "^5.4.0",
     "node-sass-chokidar": "^1.3.3",
     "npm-run-all": "^4.1.3",
@@ -17,7 +18,8 @@
     "redux-action": "^1.2.2",
     "redux-actions": "^2.6.1",
     "redux-saga": "^0.16.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "validator": "^10.7.1"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",

@@ -1,5 +1,5 @@
-import applicationReducers from './application/application.reducers';
+import auth from './auth/auth.reducers'
 
 export const getRootReducers = () => ({
-  application: applicationReducers
+  auth: auth
 });

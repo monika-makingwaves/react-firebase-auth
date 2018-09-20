@@ -1,12 +1,12 @@
 import React from 'react';
 import SignUp from "../../components/SignUp/SignUp";
 
-const Home = () => {
+const SignUpPage = () => {
   return (
-    <div>
-      Home page - protected
+    <div className={'m-3'}>
+      <SignUp />
     </div>
-  );
+  )
 };
 
-export default Home;
+export default SignUpPage;

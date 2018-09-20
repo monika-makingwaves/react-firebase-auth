@@ -1,21 +1,21 @@
-import { auth } from "./firebase";
+import { authFirebase } from "./firebase";
 
-export const createUserWithEmailAndPassword = (email, password) => (
-  auth.createUserWithEmailAndPassword(email, password)
-);
+export const createUserWithEmailAndPassword = (email, password) => {
+  return authFirebase.createUserWithEmailAndPassword(email, password)
+};
 
 export const singInWithEmailAndPassword = (email, password) => (
-  auth.signInWithEmailAndPassword(email, password)
+  authFirebase.signInWithEmailAndPassword(email, password)
 );
 
 export const signOut = () => (
-  auth.signOut()
+  authFirebase.signOut()
 );
 
 export const passwordReset = (email) => (
-  auth.sendPasswordResetEmail(email)
+  authFirebase.sendPasswordResetEmail(email)
 );
 
 export const changePassword = (password) => (
-  auth.currentUser.changePassword(password)
+  authFirebase.currentUser.changePassword(password)
 );
