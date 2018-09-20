@@ -47,7 +47,7 @@ class SignUp extends Component {
   render() {
     const { email, password, confirmPassword } = this.state;
     const {error} = this.props;
-    
+
     return (
       <div style={{maxWidth: '500px'}}>
         <Form onSubmit={this.onSubmit}>
