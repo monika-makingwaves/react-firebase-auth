@@ -24,6 +24,7 @@ class SignUp extends Component {
       this.setState(INITIAL_STATE);
     }
   }
+
   onSignInSuccessCallback = () => {
     this.props.history.push(route.HOME);
   };
@@ -54,8 +55,8 @@ class SignUp extends Component {
           <Card>
             <CardHeader>Create account</CardHeader>
             <CardBody>
+              {error && <p className={'alert alert-danger'}>{error}</p>}
               <FormGroup>
-                {error && <p className={'alert alert-danger'}>{error}</p>}
                 <Label for={'accountEmail'}>Email:</Label>
                 <Input type={'email'}
                        name={'email'}
