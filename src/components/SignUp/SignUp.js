@@ -20,7 +20,7 @@ class SignUp extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if(this.props.token) {
+    if(this.props.user) {
       this.setState(INITIAL_STATE);
     }
   }
@@ -103,7 +103,7 @@ const mapDispatchToProps = {
 };
 
 const mapStateToProps = (state) => ({
-  token: state.auth.token,
+  user: state.auth.user,
   error: state.auth.error
 });
 

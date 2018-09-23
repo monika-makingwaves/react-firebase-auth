@@ -1,14 +1,17 @@
-import { handleActions } from "redux-actions";
+import { handleActions, combineActions } from "redux-actions";
 import * as actions from './auth.actions';
 
 const initialState = {
   isFetching: false,
-  token: null,
-  error: null
+  user: null,
+  error: null,
+  message: null
 };
 
 const actionsHandlers = {
-  [actions.SIGNUP_REQUEST]: (state, {payload}) => ({
+  [combineActions(actions.SIGNUP_REQUEST,
+    actions.PASSWORD_FORGET_REQUEST,
+    actions.PASSWORD_CHANGE_REQUEST)]: (state, {payload}) => ({
     ...state,
     isFetching: true
   }),
@@ -16,7 +19,8 @@ const actionsHandlers = {
     return {
       ...state,
       isFetching: false,
-      token: payload
+      error: null,
+      user: payload
     }
   },
   [actions.SIGNUP_FAILLURE]: (state, {payload}) => {
@@ -37,7 +41,8 @@ const actionsHandlers = {
     return {
       ...state,
       isFetching: false,
-      token: payload
+      error: null,
+      user: payload
     }
   },
   [actions.LOGIN_FAILURE]: (state, {payload}) => {
@@ -48,10 +53,33 @@ const actionsHandlers = {
     }
   },
 
+  [actions.SET_USER]: (state, {payload}) => {
+    return {
+      ...state,
+      user: payload
+    }
+  },
+
   [actions.LOGOUT]: (state, {payload}) => {
     return {
       ...state,
-      token: null
+      user: null
+    }
+  },
+  [combineActions(actions.PASSWORD_FORGET_SUCCESS,
+    actions.PASSWORD_CHANGE_SUCCESS)]: (state, {payload}) => {
+    return {
+      ...state,
+      isFetching: false,
+      message: payload
+    }
+  },
+  [combineActions(actions.PASSWORD_CHANGE_FAILURE,
+    actions.PASSWORD_FORGET_FAILURE)]: (state, {payload}) => {
+    return {
+      ...state,
+      isFetching: false,
+      error: payload
     }
   }
 

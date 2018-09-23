@@ -17,5 +17,17 @@ export const passwordReset = (email) => (
 );
 
 export const changePassword = (password) => (
-  authFirebase.currentUser.changePassword(password)
+  authFirebase.currentUser.updatePassword(password)
 );
+
+export const onAuthStateChanged = () => {
+  return new Promise((resolve, reject) => {
+    authFirebase.onAuthStateChanged((user) => {
+      if(user) {
+        resolve(user);
+      } else {
+        reject (new Error('Ops! No user logged in.'));
+      }
+    })
+  });
+};

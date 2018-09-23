@@ -19,7 +19,7 @@ class Login extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if(this.props.token) {
+    if(this.props.user) {
       this.setState(INITIAL_STATE);
     }
   }
@@ -92,7 +92,7 @@ const mapDispatchToProps = {
 
 const mapStateToProps = (state) => ({
   error: state.auth.error,
-  token: state.auth.token
+  user: state.auth.user
 });
 
 export default compose(

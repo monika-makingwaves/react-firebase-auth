@@ -11,6 +11,8 @@ import LandingPage from '../pages/LandingPage';
 import LoginPage from '../pages/LoginPage';
 import ProfilePage from '../pages/ProfilePage';
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
+import PasswordForgetPage from "../pages/PasswordForgetPage/PasswordForgetPage";
+import ChangePasswordPage from "../pages/ChangePasswordPage/ChangePasswordPage";
 
 export default function() {
   const store = createStore();
@@ -23,9 +25,11 @@ export default function() {
           <Route exact path={routes.LANDING} component={LandingPage} />
           <Route exact path={routes.SIGN_UP} component={SignUpPage} />
           <Route exact path={routes.LOGIN} component={LoginPage} />
+          <Route exact path={routes.PASSWORD_FORGET} component={PasswordForgetPage}/>
 
           <Route exact path={routes.HOME} component={Home} />
           <Route exact path={routes.PROFILE} component={ProfilePage} />
+          <Route exact path={routes.PASSWORD_CHANGE} component={ChangePasswordPage}/>
         </App>
       </Router>
     </Provider>

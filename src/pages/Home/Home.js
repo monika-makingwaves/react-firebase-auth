@@ -1,12 +1,14 @@
 import React from 'react';
-import SignUp from "../../components/SignUp/SignUp";
+import ChangePasswordLink from "../../components/ChangePasswordLink/ChangePasswordLink";
+import withAuthorization from "../../components/withAuthorization/withAuthorization";
 
 const Home = () => {
   return (
     <div>
       Home page - protected
+      <p>Would you like to <ChangePasswordLink /></p>
     </div>
   );
 };
 
-export default Home;
+export default withAuthorization(Home);

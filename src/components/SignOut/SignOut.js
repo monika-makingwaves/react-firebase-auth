@@ -6,7 +6,9 @@ import {logout} from "../../state/auth/auth.actions";
 class SignOut extends Component {
   render() {
     return (
-      <Button onClick={() => this.props.logout()}/>
+      <Button onClick={() => this.props.logout()}>
+        {this.props.children}
+      </Button>
     );
   }
 }
